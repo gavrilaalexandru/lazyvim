@@ -3,3 +3,9 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "<M-BS>", "<C-w>", { desc = "Delete word backward" })
+
+vim.keymap.set({ "n", "v" }, "x", '"+d', { desc = "Cut to clipboard" })
+
+vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Delete without yanking" })
+
+vim.keymap.set("n", "dd", '"_dd', { desc = "Delete line without yanking" })
